@@ -1,0 +1,36 @@
+Medium:
+0.djikstras algorithm 
+1.Clone a graph -  https://leetcode.com/problems/clone-graph/submissions/
+2.Clone a nary tree - same as above using depth first search only diff is since tree don’t have cycles 
+3.Maximum in a subarray - use priority queue and poll the element whose index is less the (i-k+1)
+4.Median of 2 sorted arrays - use priority queue , iterate over
+5.Travelling sales man problem - back tracking and counting till all vertices are covered and checking minimum cost to cover all vertices
+6.Meeting rooms - sorting a 2 dimensional array based on start time , index 0 , and then using a priority queue to have the non overlapping end time of each meeting, finally return the size of the priority queue ,which will say the total number of meeting rooms needed.
+7.lock and key - this is a level order traversal problem, where we check for all combinations is a level to see if it is equal to the target before incrementing the counter.
+8.rotate a matrix by 90 degrees in o(1) - first swap elements other than the diagonal elements ,next swap columns except the middle column.
+9.LCS - 
+9.House robber DP -
+10.knapsack 
+Redundant connection - 
+Solution: find 2 vertices which share the common parent then it is a redundant edge or connection.
+The given graph is usually given as an advanced matrix [ a 2 dimensional array ].As a first step , we need to maintain a parent array which will maintain the parent of vertices ,I,ith position.Initially each of the vertex will be its own parent.As we proceed while iterating over the edges ,we check if the source and dest share the same parent if so we return it as the redundant connection else we mark the edge’s 0th index as parent of 1st index in the parent array
+Circular game - this is like a inky pinky game where we have to finally decide the winner. 
+Solution: we have to use a queue and do the following inside the loop
+loop:
+while size of the queue >1
+{
+	int r = k-1 // the criteria 
+	while(r>0)
+	{
+		queue.offer(queue.remove())
+		r—-;
+	}
+	queue.remove();
+
+}
+
+Return q.poll();
+
+Combination sum:
+Number of islands
+https://leetcode.com/problems/binary-watch/discuss/88471/Just-for-fun!!!!!!!-java-1ms-beats-100 — a bit tricky need to put in some time .
