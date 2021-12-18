@@ -5,9 +5,22 @@ public class MaxSubArray {
 	public static void main(String[] args)
 	{
 //		int[] a = {0,-1,2,-3,5,9,-5,10};
-		int [] a = {4,-2, 3, -4, -5, -29}; 
+		int [] a = {-4,2, 3, -4, -5, -29}; 
 //		System.out.println(getMaxSum(a,0,a.length-1));
-		System.out.println(getMaximumSubArray(a));
+//		System.out.println(getMaximumSubArray(a));
+		maxSubArray(a);
+	}
+	
+	public static void maxSubArray(int[] arr)
+	{
+		int sum=0;
+		int maxSum=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			sum = arr[i]+ Math.max(0,sum);
+			maxSum = Math.max(sum,maxSum);
+		}
+		System.out.println(maxSum);
 	}
 	
 	
